@@ -34,7 +34,7 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
                     selectedIndex === index ? "fw-bold active" : ""
                   } text-white`}
                   onClick={() => setSelectedIndex(index)}
-                  href={"/Profile/" + item}>
+                  href={"/Profile/#/" + item}>
                   {item}
                 </Nav.Link>
               </Nav.Item>
