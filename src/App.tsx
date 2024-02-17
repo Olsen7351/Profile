@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import logo from "./logo.svg";
 import "./CSS/App.css";
 import NavBar from "./Components/navbar";
-import HomePage from "./Pages/Home";
-import CVPage from "./Pages/CV";
-import AboutMePage from "./Pages/About";
-import GradesPage from "./Pages/Grades";
+import HomePage from "./Home";
+import CVPage from "./CV";
+import AboutMePage from "./About";
+import GradesPage from "./Grades";
 
 function App() {
   const navItems = ["About", "CV", "Grades"];
