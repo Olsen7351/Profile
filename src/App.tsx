@@ -19,10 +19,10 @@ function App() {
           navItems={navItems}
         />
         <Routes>
-          <Route path="/" Component={HomePage} />
-          <Route path="/About Me" Component={AboutMePage} />
-          <Route path="/CV" Component={CVPage} />
-          <Route path="/Grades" Component={GradesPage} />
+          <Route path="/Profile" Component={HomePage} />
+          <Route path="/Profile/About Me" Component={AboutMePage} />
+          <Route path="/Profile/CV" Component={CVPage} />
+          <Route path="/Profile/Grades" Component={GradesPage} />
         </Routes>
       </div>
     </Router>

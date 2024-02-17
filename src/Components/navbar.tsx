@@ -32,9 +32,9 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
                 <Nav.Link
                   className={`${
                     selectedIndex === index ? "fw-bold active" : ""
-                  } text-white`} // Add the "text-white" class here
+                  } text-white`}
                   onClick={() => setSelectedIndex(index)}
-                  href={item}>
+                  href={"/profile/" + item}>
                   {item}
                 </Nav.Link>
               </Nav.Item>
