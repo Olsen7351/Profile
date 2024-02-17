@@ -10,6 +10,7 @@ import GradesPage from "./Grades";
 
 
 
+
 function App() {
   const navItems = ["About", "CV", "Grades"];
   return (
