@@ -4,9 +4,6 @@ import "./CSS/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CV from "./Pages/CV";
-import GradesPage from "./Pages/Grades";
-import AboutMe from "./Pages/About";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
