@@ -1,5 +1,6 @@
 name: Update gh-pages
-
+permissions:
+  contents: write
 on:
   push:
     branches:
