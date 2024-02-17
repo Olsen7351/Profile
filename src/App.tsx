@@ -5,11 +5,11 @@ import "./CSS/App.css";
 import NavBar from "./Components/navbar";
 import HomePage from "./Pages/Home";
 import CVPage from "./Pages/CV";
-import AboutMePage from "./Pages/AboutMe";
-import GradesPage from "./Pages/grades";
+import AboutMePage from "./Pages/About";
+import GradesPage from "./Pages/Grades";
 
 function App() {
-  const navItems = ["About Me", "CV", "Grades"];
+  const navItems = ["About", "CV", "Grades"];
   return (
     <Router>
       <div className="App">
@@ -20,7 +20,7 @@ function App() {
         />
         <Routes>
           <Route path="/Profile" Component={HomePage} />
-          <Route path="/Profile/About Me" Component={AboutMePage} />
+          <Route path="/Profile/About" Component={AboutMePage} />
           <Route path="/Profile/CV" Component={CVPage} />
           <Route path="/Profile/Grades" Component={GradesPage} />
         </Routes>
