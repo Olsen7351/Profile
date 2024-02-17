@@ -8,6 +8,7 @@ import CVPage from "./CV";
 import AboutMePage from "./About";
 import GradesPage from "./Grades";
 
+
 function App() {
   const navItems = ["About", "CV", "Grades"];
   return (
