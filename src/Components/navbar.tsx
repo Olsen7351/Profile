@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import "../CSS/App.css";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Image,
-  FormControl,
-  Button,
-  Form,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, Image } from "react-bootstrap";
 
 interface NavBarProps {
   brandName: string;
@@ -20,9 +12,9 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
-    <Navbar expand="md" bg="white" variant="light" className="shadow">
+    <Navbar expand="md" bg="black" className="shadow">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/Profile">
           <Image
             src={imageSrcPath}
             width="60"
@@ -30,7 +22,7 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
             className="d-inline-block align-center"
             alt=""
           />
-          <span className="fw-bolder fs-4">{brandName}</span>
+          <span className="fw-bolder fs-4 text-white">{brandName}</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
@@ -38,25 +30,16 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
             {navItems.map((item, index) => (
               <Nav.Item key={index}>
                 <Nav.Link
-                  className={selectedIndex === index ? "fw-bold active" : ""}
+                  className={`${
+                    selectedIndex === index ? "fw-bold active" : ""
+                  } text-white`}
                   onClick={() => setSelectedIndex(index)}
-                  href="#">
+                  href={"/Profile/#/" + item}>
                   {item}
                 </Nav.Link>
               </Nav.Item>
             ))}
           </Nav>
-          <Form className="d-flex me-3">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success" type="submit">
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

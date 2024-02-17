@@ -1,10 +1,15 @@
 import React from "react";
-import logo from "./Images/logo.svg";
+import { Route, Routes } from "react-router-dom";
+import logo from "./logo.svg";
 import "./CSS/App.css";
 import NavBar from "./Components/navbar";
+import HomePage from "./Pages/Home";
+import CVPage from "./Pages/CV";
+import AboutMePage from "./Pages/About";
+import GradesPage from "./Pages/Grades";
 
 function App() {
-  const navItems = ["Home", "About", "Services", "Contact"];
+  const navItems = ["About", "CV", "Grades"];
   return (
     <div className="App">
       <NavBar
@@ -12,19 +17,12 @@ function App() {
         imageSrcPath={logo}
         navItems={navItems}
       />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/About" element={<AboutMePage />} />
+        <Route path="/CV" element={<CVPage />} />
+        <Route path="/Grades" element={<GradesPage />} />
+      </Routes>
     </div>
   );
 }

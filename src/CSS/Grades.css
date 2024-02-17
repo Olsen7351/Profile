@@ -1,0 +1,10 @@
+.Grade_Container {
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #323232;
+  color: white;
+  border-radius: 10px;
+}
