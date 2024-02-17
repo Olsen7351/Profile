@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import "../CSS/App.css";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Image,
-  FormControl,
-  Button,
-  Form,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, Image } from "react-bootstrap";
 
 interface NavBarProps {
   brandName: string;
@@ -22,7 +14,7 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
   return (
     <Navbar expand="md" bg="white" variant="light" className="shadow">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href={"/" + brandName}>
           <Image
             src={imageSrcPath}
             width="60"
@@ -46,17 +38,6 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
               </Nav.Item>
             ))}
           </Nav>
-          <Form className="d-flex me-3">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success" type="submit">
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

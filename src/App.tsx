@@ -4,7 +4,7 @@ import "./CSS/App.css";
 import NavBar from "./Components/navbar";
 
 function App() {
-  const navItems = ["Home", "About", "Services", "Contact"];
+  const navItems = ["Home", "About", "CV", "Contact", "Grades"];
   return (
     <div className="App">
       <NavBar
