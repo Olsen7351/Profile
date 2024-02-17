@@ -1,10 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./Images/logo.svg";
+import "./CSS/App.css";
+import NavBar from "./Components/navbar";
 
 function App() {
+  const navItems = ["Home", "About", "Services", "Contact"];
   return (
     <div className="App">
+      <NavBar
+        brandName="Jens Olsen's Profile"
+        imageSrcPath={logo}
+        navItems={navItems}
+      />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -14,8 +21,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
