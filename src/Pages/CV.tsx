@@ -1,5 +1,5 @@
 import React from "react";
-import { Viewer, SpecialZoomLevel, Worker } from "@react-pdf-viewer/core";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import cvPdf from "../pdfs/cv.pdf";
 

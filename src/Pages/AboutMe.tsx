@@ -35,7 +35,12 @@ function AboutMe() {
       <div className="about-me-container">
         <div className="about-me-card">
           <div className="about-me-info">
-            <img src={profileImage} className="img-fluid" />
+            <img
+              src={profileImage}
+              className="img-fluid"
+              title="ProfilePicture"
+              alt="ProfilePicture"
+            />
           </div>
         </div>
       </div>
