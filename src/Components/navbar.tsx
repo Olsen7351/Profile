@@ -12,9 +12,9 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
-    <Navbar expand="md" bg="white" variant="light" className="shadow">
+    <Navbar expand="md" bg="black" className="shadow">
       <Container>
-        <Navbar.Brand href={"/" + brandName}>
+        <Navbar.Brand href="/">
           <Image
             src={imageSrcPath}
             width="60"
@@ -22,7 +22,7 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
             className="d-inline-block align-center"
             alt=""
           />
-          <span className="fw-bolder fs-4">{brandName}</span>
+          <span className="fw-bolder fs-4 text-white">{brandName}</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
@@ -30,9 +30,11 @@ function NavBar({ brandName, imageSrcPath, navItems }: NavBarProps) {
             {navItems.map((item, index) => (
               <Nav.Item key={index}>
                 <Nav.Link
-                  className={selectedIndex === index ? "fw-bold active" : ""}
+                  className={`${
+                    selectedIndex === index ? "fw-bold active" : ""
+                  } text-white`} // Add the "text-white" class here
                   onClick={() => setSelectedIndex(index)}
-                  href="#">
+                  href={item}>
                   {item}
                 </Nav.Link>
               </Nav.Item>
