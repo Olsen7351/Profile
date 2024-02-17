@@ -1,31 +1,31 @@
 import React from "react";
-import logo from "./Images/logo.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import logo from "./logo.svg";
 import "./CSS/App.css";
 import NavBar from "./Components/navbar";
+import HomePage from "./Pages/Home";
+import CVPage from "./Pages/CV";
+import AboutMePage from "./Pages/AboutMe";
+import GradesPage from "./Pages/grades";
 
 function App() {
-  const navItems = ["Home", "About", "CV", "Contact", "Grades"];
+  const navItems = ["About Me", "CV", "Grades"];
   return (
-    <div className="App">
-      <NavBar
-        brandName="Jens Olsen's Profile"
-        imageSrcPath={logo}
-        navItems={navItems}
-      />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar
+          brandName="Jens Olsen's Profile"
+          imageSrcPath={logo}
+          navItems={navItems}
+        />
+        <Routes>
+          <Route path="/" Component={HomePage} />
+          <Route path="/About Me" Component={AboutMePage} />
+          <Route path="/CV" Component={CVPage} />
+          <Route path="/Grades" Component={GradesPage} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
