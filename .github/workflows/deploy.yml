@@ -28,10 +28,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Build
         run: npm run build:pages
+
+      - name: Prepare artifact (site root = index.html)
+        run: |
+          mkdir -p _site
+          cp -r dist/personal-cv/* _site/
+          ls -la _site
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
@@ -39,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/personal-cv
+          path: _site
 
   deploy:
     environment:
