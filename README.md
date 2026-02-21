@@ -18,18 +18,37 @@ npm run build      # Production build (output: dist/personal-cv)
 npm run build:pages   # Build with base href for GitHub Pages
 ```
 
-## Deploy to GitHub Pages
+## Deploy to GitHub Pages (publish from `docs` folder)
 
-1. Push this repo to GitHub (e.g. `YourUsername/Personal_CV`).
-2. In the repo: **Settings → Pages → Build and deployment**:
-   - Source: **GitHub Actions**.
-3. Push to the `main` branch (or run the workflow manually). The **Build and deploy to GitHub Pages** workflow will build and publish the site.
+1. **Create a GitHub repository** for this project (this repo is set up for a repo named **Profile**).
+2. **Configure git and push** (use the commands GitHub shows when you create the repo; they look like this):
 
-The site will be available at:
+   ```bash
+   git remote add origin https://github.com/your-username/your-project-name.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-**https://YourUsername.github.io/Personal_CV/**
+3. **Create the `gh-pages` branch and build:**
 
-To use a custom domain or deploy from a different branch, adjust the workflow and `base-href` in `package.json` (`build:pages` script) and in the workflow artifact path if needed.
+   ```bash
+   git checkout -b gh-pages
+   npm run deploy:pages
+   ```
+
+   This runs `ng build --output-path docs --base-href /Profile/` and then moves the build into `docs/` and creates `docs/404.html` for SPA routing.
+
+4. **Commit and push:**
+
+   ```bash
+   git add docs package.json scripts
+   git commit -m "Build for GitHub Pages"
+   git push -u origin gh-pages
+   ```
+
+5. **On GitHub:** go to the repo **Settings → Pages**. Under **Build and deployment**, set **Source** to **Deploy from a branch**, choose branch **gh-pages** and folder **/docs**, then **Save**.
+
+Your site will be at **https://\<user_name\>.github.io/Profile/**.
 
 ## Content
 
