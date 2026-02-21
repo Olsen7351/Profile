@@ -30,9 +30,12 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .about p {
-      margin: 0 0 1rem;
+      margin: 0 0 1.15rem;
       color: var(--color-text-muted);
+      font-size: 0.9875rem;
+      line-height: 1.7;
     }
+    .about p:first-child { font-size: 1.02rem; color: var(--color-text-secondary); }
     .about p:last-child { margin-bottom: 0; }
     .about strong { color: var(--color-text); }
   `],
