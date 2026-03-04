@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       <div class="section__content contact">
         <div class="contact__block">
           <p class="contact__name">Jens Møller Olsen</p>
-          <p class="contact__address">Marius Holst Gade 7, 3.TH · Denmark</p>
+          <p class="contact__address">HF Strandlyst 12, 8700 Horsens · Denmark</p>
         </div>
         <ul class="contact__links" aria-label="Contact links">
           <li>
@@ -25,8 +25,9 @@ import { Component } from '@angular/core';
           </li>
         </ul>
         <p class="contact__note">
-          Open to roles in software development, including positions like Software Development
-          Engineer I in high-scale, product-focused teams (e.g. travel & landing platforms).
+          Open to roles in software development and product management, including positions like
+          Software Development Engineer I or Product Manager in high-scale, product-focused teams
+          (e.g. travel & landing platforms).
         </p>
       </div>
     </section>

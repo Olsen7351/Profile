@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   template: `
     <header class="hero">
       <div class="hero__inner">
+        <img
+          src="assets/ProfilePicture.jpg"
+          alt="Jens Møller Olsen"
+          class="hero__photo"
+          width="160"
+          height="160"
+        />
         <h1 class="hero__name">Jens Møller Olsen</h1>
         <p class="hero__title">Software Engineer</p>
         <p class="hero__tagline">
@@ -14,6 +21,7 @@ import { Component } from '@angular/core';
         </p>
         <nav class="hero__nav" aria-label="Page sections">
           <a href="#about" class="hero__nav-link">About</a>
+          <a href="#education" class="hero__nav-link">Education</a>
           <a href="#experience" class="hero__nav-link">Experience</a>
           <a href="#projects" class="hero__nav-link">Projects</a>
           <a href="#skills" class="hero__nav-link">Skills</a>
@@ -44,6 +52,17 @@ import { Component } from '@angular/core';
       max-width: 720px;
       margin: 0 auto;
       text-align: center;
+    }
+    .hero__photo {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-border);
+      margin-bottom: 1.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .hero__name {
       font-size: clamp(2.25rem, 5.5vw, 3.25rem);

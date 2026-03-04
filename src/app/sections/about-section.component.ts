@@ -21,7 +21,14 @@ import { Component } from '@angular/core';
           using AI-assisted tools responsibly to speed up development while keeping code quality high.
         </p>
         <p>
-          I hold a <strong>Professionsbachelor in Software Engineering</strong> from VIA Horsens
+          I see myself as a learner of <strong>problem-solving and concepts</strong>—syntax can be picked up
+          quickly; what matters is understanding the ideas behind the code. I believe developers today
+          should put more focus on <strong>specs and conceptual understanding</strong> to write good code,
+          especially with AI tools that can generate code faster than any human—they need clear guidance
+          and direction. I've been toying with <strong>agentic engineering</strong> to explore that space.
+        </p>
+        <p>
+          I hold a <strong>Diplominginør in Softwareteknologi</strong> from VIA University College
           and have worked in both product teams (Systematic) and my own side projects (RNS Apps).
           Outside work I enjoy padel, cycling, running, and OCR races.
         </p>

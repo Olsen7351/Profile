@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
         <article class="project">
           <h3 class="project__name">Smash – Padel</h3>
           <p class="project__desc">
-            Web app for the padel community, built for fun and real use. Focus on performance
-            and a smooth user experience.
+            Web app for the padel community, built for real use: connecting players, simplifying booking,
+            and improving the experience for clubs and users. Demonstrates full-stack delivery, performance
+            focus, and building products that users actually use.
           </p>
           <a href="https://www.smash.rns-apps.dk" target="_blank" rel="noopener noreferrer" class="project__link">
             www.smash.rns-apps.dk
@@ -21,8 +22,9 @@ import { Component } from '@angular/core';
         <article class="project">
           <h3 class="project__name">POS – Point of Sale</h3>
           <p class="project__desc">
-            Point-of-sale and management tool for padel venues; full-stack project showcasing
-            MERN stack and end-to-end product delivery.
+            Point-of-sale and venue management tool for padel clubs: full-stack MERN (MongoDB, Express,
+            React, Node.js) from idea to production. Shows I can own a product end-to-end—requirements,
+            design, implementation, and deployment—and deliver value for a specific domain.
           </p>
           <a href="https://www.pos.rns-apps.dk" target="_blank" rel="noopener noreferrer" class="project__link">
             www.pos.rns-apps.dk
@@ -32,7 +34,8 @@ import { Component } from '@angular/core';
         <article class="project">
           <h3 class="project__name">Profile / Small Programming Project</h3>
           <p class="project__desc">
-            Personal profile and small programming demos; hosted on GitHub Pages.
+            This CV site and small programming demos; built with Angular and deployed on GitHub Pages.
+            Illustrates ability to ship a modern front-end, maintain a clear structure, and keep content and tooling up to date.
           </p>
           <a href="https://olsen7351.github.io/Profile/" target="_blank" rel="noopener noreferrer" class="project__link">
             olsen7351.github.io/Profile/
