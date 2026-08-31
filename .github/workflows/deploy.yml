@@ -36,7 +36,7 @@ jobs:
       - name: Prepare artifact (site root = index.html)
         run: |
           mkdir -p _site
-          cp -r dist/personal-cv/* _site/
+          cp -r dist/personal-cv/browser/* _site/
           ls -la _site
 
       - name: Setup GitHub Pages
