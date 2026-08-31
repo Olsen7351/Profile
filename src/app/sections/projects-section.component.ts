@@ -1,41 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
   template: `
     <section id="projects" class="section">
-      <h2 class="section__title">Projects</h2>
+      <h2 class="section__title">{{ t().projects.title }}</h2>
       <div class="section__content projects">
-        <article class="project">
-          <h3 class="project__name">Smash – Padel</h3>
-          <p class="project__desc">
-            Web app for the padel community, built for fun and real use. Focus on performance
-            and a smooth user experience.
-          </p>
-          <a href="https://www.smash.rns-apps.dk" target="_blank" rel="noopener noreferrer" class="project__link">
-            www.smash.rns-apps.dk →
-          </a>
-        </article>
-        <article class="project">
-          <h3 class="project__name">POS – Point of Sale</h3>
-          <p class="project__desc">
-            Point-of-sale and management tool for padel venues; full-stack project showcasing
-            MERN stack and end-to-end product delivery.
-          </p>
-          <a href="https://www.pos.rns-apps.dk" target="_blank" rel="noopener noreferrer" class="project__link">
-            www.pos.rns-apps.dk →
-          </a>
-        </article>
-        <article class="project">
-          <h3 class="project__name">Profile / Small Programming Project</h3>
-          <p class="project__desc">
-            Personal profile and small programming demos; hosted on GitHub Pages.
-          </p>
-          <a href="https://olsen7351.github.io/Profile/" target="_blank" rel="noopener noreferrer" class="project__link">
-            olsen7351.github.io/Profile/ →
-          </a>
-        </article>
+        @for (project of t().projects.items; track project.name) {
+          <article class="project">
+            <h3 class="project__name">{{ project.name }}</h3>
+            <p class="project__desc">{{ project.desc }}</p>
+            @if (project.url) {
+              <a [href]="project.url" target="_blank" rel="noopener noreferrer" class="project__link">
+                {{ project.urlLabel }} →
+              </a>
+            }
+          </article>
+        }
       </div>
     </section>
   `,
@@ -57,4 +40,6 @@ import { Component } from '@angular/core';
     .project__link { font-size: 0.9rem; font-family: var(--font-mono); }
   `],
 })
-export class ProjectsSectionComponent {}
+export class ProjectsSectionComponent {
+  protected readonly t = inject(LanguageService).t;
+}

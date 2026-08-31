@@ -4,7 +4,21 @@
   box-sizing: border-box;
 }
 
+@mixin light-tokens {
+  color-scheme: light;
+  --color-bg: #f7f7f9;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-border: #dcdce3;
+  --color-text: #1c1c21;
+  --color-text-muted: #55555e;
+  --color-accent: #0e7490;
+  --color-accent-soft: rgba(14, 116, 144, 0.1);
+  --color-highlight: #6d28d9;
+}
+
 :root {
+  color-scheme: dark;
   --color-bg: #0d0d0f;
   --color-surface: #16161a;
   --color-surface-elevated: #1e1e24;
@@ -18,6 +32,16 @@
   --font-mono: 'JetBrains Mono', monospace;
   --radius: 12px;
   --radius-sm: 8px;
+}
+
+:root[data-theme='light'] {
+  @include light-tokens;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    @include light-tokens;
+  }
 }
 
 html {

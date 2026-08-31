@@ -1,25 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../i18n/language.service';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
   template: `
     <section id="contact" class="section">
-      <h2 class="section__title">Contact</h2>
+      <h2 class="section__title">{{ t().contact.title }}</h2>
       <div class="section__content contact">
         <p>
-          <strong>Jens Møller Olsen</strong><br />
-          Marius Holst Gade 7, 3.TH · Denmark
+          <strong>{{ t().contact.name }}</strong><br />
+          {{ t().contact.location }}
         </p>
         <ul class="contact__links">
-          <li><a href="mailto:olsen7351@gmail.com">olsen7351&#64;gmail.com</a></li>
-          <li><a href="tel:+4521125950">+45 21 12 59 50</a></li>
-          <li><a href="https://www.linkedin.com/in/jens-olsen-19b2aa222/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a [href]="'mailto:' + t().contact.email">{{ t().contact.email }}</a></li>
+          <li><a [href]="t().contact.phoneHref">{{ t().contact.phone }}</a></li>
         </ul>
-        <p class="contact__note">
-          Open to roles in software development, including positions like Software Development
-          Engineer I in high-scale, product-focused teams (e.g. travel & landing platforms).
-        </p>
+        <p class="contact__note">{{ t().contact.note }}</p>
       </div>
     </section>
   `,
@@ -43,4 +40,6 @@ import { Component } from '@angular/core';
     }
   `],
 })
-export class ContactSectionComponent {}
+export class ContactSectionComponent {
+  protected readonly t = inject(LanguageService).t;
+}

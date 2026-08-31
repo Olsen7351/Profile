@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from './sections/hero-section.component';
 import { AboutSectionComponent } from './sections/about-section.component';
+import { EducationSectionComponent } from './sections/education-section.component';
 import { ExperienceSectionComponent } from './sections/experience-section.component';
 import { ProjectsSectionComponent } from './sections/projects-section.component';
 import { SkillsSectionComponent } from './sections/skills-section.component';
@@ -14,6 +15,7 @@ import { ContactSectionComponent } from './sections/contact-section.component';
     CommonModule,
     HeroSectionComponent,
     AboutSectionComponent,
+    EducationSectionComponent,
     ExperienceSectionComponent,
     ProjectsSectionComponent,
     SkillsSectionComponent,
@@ -23,6 +25,7 @@ import { ContactSectionComponent } from './sections/contact-section.component';
     <app-hero-section />
     <main>
       <app-about-section />
+      <app-education-section />
       <app-experience-section />
       <app-projects-section />
       <app-skills-section />

@@ -2,13 +2,13 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../i18n/language.service';
 
 @Component({
-  selector: 'app-experience-section',
+  selector: 'app-education-section',
   standalone: true,
   template: `
-    <section id="experience" class="section">
-      <h2 class="section__title">{{ t().experience.title }}</h2>
+    <section id="education" class="section">
+      <h2 class="section__title">{{ t().education.title }}</h2>
       <div class="section__content timeline">
-        @for (item of t().experience.items; track item.role + item.company + item.date) {
+        @for (item of t().education.items; track item.role + item.date) {
           <article class="timeline__item">
             <div class="timeline__meta">
               <span class="timeline__role">{{ item.role }}</span>
@@ -37,6 +37,6 @@ import { LanguageService } from '../i18n/language.service';
     .timeline__location { font-size: 0.85rem; color: var(--color-text-muted); opacity: 0.9; }
   `],
 })
-export class ExperienceSectionComponent {
+export class EducationSectionComponent {
   protected readonly t = inject(LanguageService).t;
 }
