@@ -159,6 +159,24 @@ import { ThemeService } from '../theme.service';
     .hero__nav a:hover {
       color: var(--color-accent);
     }
+    @media print {
+      .hero {
+        background: none;
+        padding: 0 0 1.5rem;
+      }
+      .hero__controls,
+      .hero__nav {
+        display: none;
+      }
+      .hero__photo {
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero__tagline {
+        margin-bottom: 0;
+      }
+    }
   `],
 })
 export class HeroSectionComponent {

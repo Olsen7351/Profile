@@ -44,6 +44,40 @@
   }
 }
 
+@page {
+  margin: 12mm;
+}
+
+@media print {
+  :root,
+  :root[data-theme='dark'] {
+    @include light-tokens;
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-elevated: #ffffff;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  main {
+    padding-bottom: 0 !important;
+  }
+
+  .section {
+    padding: 1.25rem 0;
+  }
+
+  .section__title {
+    break-after: avoid;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

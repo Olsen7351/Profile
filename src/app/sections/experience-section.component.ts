@@ -35,6 +35,9 @@ import { LanguageService } from '../i18n/language.service';
     .timeline__date { color: var(--color-text-muted); font-size: 0.9rem; margin-left: auto; }
     .timeline__desc { margin: 0 0 0.35rem; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; }
     .timeline__location { font-size: 0.85rem; color: var(--color-text-muted); opacity: 0.9; }
+    @media print {
+      .timeline__item { break-inside: avoid; padding: 0.85rem 0; }
+    }
   `],
 })
 export class ExperienceSectionComponent {

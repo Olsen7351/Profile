@@ -38,6 +38,10 @@ import { LanguageService } from '../i18n/language.service';
       line-height: 1.55;
     }
     .project__link { font-size: 0.9rem; font-family: var(--font-mono); }
+    @media print {
+      .projects { gap: 0.75rem; }
+      .project { break-inside: avoid; }
+    }
   `],
 })
 export class ProjectsSectionComponent {
