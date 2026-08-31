@@ -33,7 +33,7 @@ function initialLang(): Lang {
       return stored;
     }
   } catch {
-    // fall through to browser language
+    // fall through to the Danish default
   }
-  return navigator.language?.toLowerCase().startsWith('da') ? 'da' : 'en';
+  return 'da';
 }
